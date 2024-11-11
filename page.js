@@ -31,6 +31,13 @@ window.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("hashchange", () => {
   const hashValue = parseInt(window.location.hash.substring(1));
 
+  // 60일 때만 grayscale 필터 제거
+  if (hashValue === 60) {
+    document.body.style.filter = "none"; // 필터 제거
+  } else {
+    document.body.style.filter = "grayscale(100%)"; // 나머지에는 grayscale 필터 적용
+  }
+
   if (hashValue >= 1 && hashValue <= 8) {
     currentIndex = hashValue;
     imgElement.src = `${IMG_PATH}${currentIndex}.jpg`;
@@ -69,6 +76,7 @@ function nextImage() {
     hashValue === 31 ||
     hashValue === 37 ||
     hashValue === 44 ||
+    hashValue === 52 ||
     hashValue === 60 ||
     hashValue === 67 ||
     hashValue === 75 ||
@@ -272,6 +280,11 @@ function updateButtonsForHash(hashValue) {
     case 42:
       firstBtn = 67;
       secondBtn = 49;
+      break;
+
+    case 43:
+      firstBtn = 56;
+      secondBtn = 57;
       break;
 
     case 45:
@@ -640,6 +653,8 @@ function removeAllButtons() {
 
 // 버튼을 생성하는 함수
 function createBtn(firstBtn, secondBtn, thirdBtn) {
+  const hashValue = parseInt(window.location.hash.substring(1));
+
   const btnDiv = document.createElement("div");
   btnDiv.classList.add("btn-div"); // 클래스 추가로 중복 방지
 
@@ -658,6 +673,7 @@ function createBtn(firstBtn, secondBtn, thirdBtn) {
   btnDiv.style.paddingRight = "20%";
   btnDiv.style.fontSize = "14px";
   btnDiv.style.justifyContent = "center";
+  btnDiv.style.color = hashValue === 145 ? "white" : "black";
 
   btnDiv.innerHTML = `
     <p data-hash="#${firstBtn}"> YES &#8594;   p${firstBtn}</p>
