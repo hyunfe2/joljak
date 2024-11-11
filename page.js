@@ -129,6 +129,7 @@ function createDivForPageSix() {
 
   newDiv.style.width = "100%";
   newDiv.style.height = "100%";
+  newDiv.style.gap = "8px";
 
   newDiv.style.margin = "auto";
   newDiv.style.alignItems = "flex-end";
@@ -139,12 +140,12 @@ function createDivForPageSix() {
   newDiv.style.justifyContent = "center";
 
   newDiv.innerHTML = `
-    <p data-hash="#12">&#8594;   p12</p>
-    <p data-hash="#13">&#8594;   p13</p>
-    <p data-hash="#16">&#8594;   p16</p>
-    <p data-hash="#20">&#8594;   p20</p>
-    <p data-hash="#17">&#8594;   p17</p>
-    <p data-hash="#19">&#8594;   p19</p>
+    <p style="width : 100%" data-hash="#12"><br/></p>
+    <p style="width : 100%" data-hash="#13"><br/></p>
+    <p style="width : 100%" data-hash="#16"><br/></p>
+    <p style="width : 100%" data-hash="#20"><br/></p>
+    <p style="width : 100%" data-hash="#17"><br/></p>
+    <p style="width : 100%" data-hash="#19"><br/></p>
   `;
 
   const pTags = newDiv.querySelectorAll("p");
@@ -660,8 +661,8 @@ function createBtn(firstBtn, secondBtn, thirdBtn) {
 
   btnDiv.style.display = "flex";
   btnDiv.style.position = "absolute";
-  btnDiv.style.top = "70%";
-  btnDiv.style.left = "40%";
+  btnDiv.style.top = "77%";
+  btnDiv.style.left = "38%";
   btnDiv.style.transform = "translate(-50%, -50%)";
   btnDiv.style.flexDirection = "column";
   btnDiv.style.maxWidth = "430px";
@@ -670,7 +671,6 @@ function createBtn(firstBtn, secondBtn, thirdBtn) {
   btnDiv.style.height = "100%";
   btnDiv.style.margin = "auto";
   btnDiv.style.alignItems = "flex-end";
-  btnDiv.style.paddingRight = "20%";
   btnDiv.style.fontSize = "14px";
   btnDiv.style.justifyContent = "center";
   btnDiv.style.color = hashValue === 145 ? "white" : "black";

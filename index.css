@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "AppleSDGothicNeoR";
+  src: url("./fonts/AppleSDGothicNeoR.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 전체 페이지에 폰트 적용 */
+body {
+  font-family: "AppleSDGothicNeoR", sans-serif;
+}
+
 body {
   margin: 0;
   padding: 0;
