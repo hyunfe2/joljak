@@ -1,4 +1,4 @@
-const IMG_PATH = "/images/";
+const IMG_PATH = "images/";
 const imgElement = document.querySelector(".game-start-img");
 
 // 초기 이미지 로드 및 페이지 상태 설정
